@@ -6,8 +6,7 @@ library(ggplot2)
 
 
 #data import
-df=read.csv("D:/excel/Loan_Train.csv",header = T)
-
+df=read.csv("Loan_Train.csv")
 #data cleaning
 df[df==""]=NA
 df1=drop_na(df)
@@ -90,4 +89,5 @@ gen_approv=df1%>%group_by(Gender)%>%summarise(approvalrate=mean(Loan_Status=="Y"
 print(gen_approv)
 ggplot(gen_approv,aes(x=Gender,fill =approvalrate ))+geom_bar(position = "fill")
 
-#approval rate by martial status
+#approval rate by martial status 
+
