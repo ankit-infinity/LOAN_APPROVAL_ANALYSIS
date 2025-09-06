@@ -23,7 +23,16 @@ str(df1)
 Total_Income=df1$ApplicantIncome+df1$CoapplicantIncome
 log_total_income=log(Total_Income,base = exp(1))
 hist(log_total_income,col="blue",xlim = c(7.5,11.5),breaks = 20)
-   
+
+#removing oulier for applicant income
+quantile(df1$ApplicantIncome)
+u=IQR(df1$ApplicantIncome)
+u
+u_b=5852.50+1.5*u
+l_b=2898.75 -1.5*u
+df2=subset(df1,df1$ApplicantIncome>l_b & df1$ApplicantIncome<u_b)
+
+
 #PERFORMING SOME SORTS OF EDA RELATED TO DATA
 
 #number of people who take loan group by gender
@@ -72,15 +81,26 @@ ggplot(df1,aes(x=factor(Dependents),fill=Loan_Status))+geom_bar(position = "fill
 #income distribution
 ggplot(df1,aes(x=ApplicantIncome))+geom_histogram(bins = 30,fill="steelblue",color="black")+labs(title = "distribution of applicant income")
 
+#income distribution after removing outlier
+ggplot(df2,aes(x=ApplicantIncome))+geom_histogram(bins = 30,fill="steelblue",color="black")+labs(title = "distribution of applicant income without outlier")
+
+
 #loan amount distribution
 ggplot(df1,aes(x=LoanAmount))+geom_histogram(bins = 30,fill="green",color="black")+labs(title = "distribution of loan amount")
 
 #income vs loanstatus
 ggplot(df1,aes(x=Loan_Status,y=ApplicantIncome))+geom_boxplot()+labs(title = " applicant income vs loan status")
 
-#total inaome vs loan amount
+#income vs loanstatus after removing outlier
+ggplot(df2,aes(x=Loan_Status,y=ApplicantIncome))+geom_boxplot()+labs(title = " applicant income vs loan status")
+
+
+#total income vs loan amount
 ggplot(df1,aes(x=Total_Income,y=LoanAmount,color=Loan_Status))+geom_point(aes(size=LoanAmount),alpha=0.6)+labs(title = "total income vs loan amount")+theme_minimal()
 
+#total income vs loan amount after removing outlier
+Total_Income2=df2$ApplicantIncome+df2$CoapplicantIncome
+ggplot(df2,aes(x=Total_Income2,y=LoanAmount,color=Loan_Status))+geom_point(aes(size=LoanAmount),alpha=0.6)+labs(title = "total income vs loan amount (without outlier)")+theme_minimal()
 
 #CREDIT HISTORY AND LOAN APPROVAL
 ggplot(df1,aes(x=factor(Credit_History),fill = Loan_Status))+geom_bar(position = "fill")+labs(title = "loan approved  proportion by credit history",x="credit history(0=NO,1=YES)",y="proportion")
