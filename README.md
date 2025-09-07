@@ -7,6 +7,7 @@ driven insights of applicant profile which will help bank and other organisation
 to take proper future decision regarding loan approval.
 
 #Dataset
+
 The dataset include the following features:
 loan_ID: This include applicant loan id
 Gender: whether applicant is male or female
@@ -23,6 +24,7 @@ Property area: whether applicant live in rural urban or semiurban
 loan status: whether loan is approved (1) or not(0)
 
 #Methodology
+
 1.Data preparation
 The dataset was cleaned and pre -processed , including handling missing value,
 outlier detection .
@@ -32,6 +34,7 @@ bargraph ,scatterplot and  also using pipe operator and group by function to
 sort out data relevantly.
 
 #Key findings and recommendation
+
 Gender: male applicants are more in number than female candidates though both
 have almost similar approval rates hence gender is not a strong factor.
 Martial status: married applicant are more in number than non married applicant
