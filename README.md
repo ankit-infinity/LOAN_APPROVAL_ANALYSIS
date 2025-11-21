@@ -53,22 +53,42 @@ sort out data relevantly.
 Gender: male applicants are more in number than female candidates though both
 have almost similar approval rates hence gender is not a strong factor.
 
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/gen%20_count.png)
+
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/gender.png)
+
 Martial status: married applicant are more in number than non married applicant
 also former has higher approval status
+
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/martial_count.png)
+
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/martial_status.png)
 
 Dependents:applicants with no dependents is more to apply for loan than 
 applicants with higher dependents, also applicant with fewer dependents have higher
 approval rate.
 
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/dependent_count.png)
+
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/dependent.png)
+
 Education: Graduates have higher approval rate compared to non-graduates
+
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/education.png)
 
 self employed : self employed are less in number to apply for loan than 
 those who are not.
 
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/emp_count.png)
+
 The income of majority of the applicant is ranging from (2,500-5,000) per months.
+
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/income%20distribution.png)
 
 Most approvals cluster around moderate income of (2000-10000) and loan amount 100-200
 high loan amount are less frequently approved regardless of income.
+
+![alt text](https://github.com/ankit-infinity/LOAN_APPROVAL_ANALYSIS/blob/main/visualization/icome%20and%20loan%20amount.png)
 
 # Bank's Insights
   
